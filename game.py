@@ -78,7 +78,7 @@ class Game:
             for j in range(8):
                 if self.board[i][j] is '-':
                     list.append([i, j])
-        for i in range(0, len(list)):
+        for i in range(len(list)):
             if i == 0:
                 list[i][0] = 'A'
             elif i == 1:
@@ -264,4 +264,4 @@ if __name__ == "__main__":
     elif grid.O_won():
         print "O wins"
     elif grid.tied():
-        print "T
+        print "Tie"
