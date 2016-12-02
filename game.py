@@ -214,6 +214,18 @@ class Game:
         elif player is 'X':
             return beta
 
+    def printHistory():
+        
+        print 'Player vs. Opponent'
+        
+        for pMove in self.playerMoves:
+            
+            for cMove in self.compMoves:
+                
+                print move + ". ",
+                print pMove + "  ",
+                print cMove
+
 
 def evaluate(grid, player):
     a = -2
@@ -265,3 +277,5 @@ if __name__ == "__main__":
         print "O wins"
     elif grid.tied():
         print "Tie"
+    
+    grid.printHistory()
